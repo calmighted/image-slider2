@@ -8,9 +8,9 @@ const nextBtn = document.querySelector('#next');
 let counter = 1;
 const size = images[0].clientWidth;
 
-console.log(size)
 nextBtn.addEventListener('click',()=>{
-    
+    console.log("clicked")
+    if(counter <= 6) return;
     slider.style.transition = "transform 0.4s ease-in-out";
     counter++;
     slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -18,6 +18,7 @@ nextBtn.addEventListener('click',()=>{
 
 
 prevBtn.addEventListener('click',()=>{
+    console.log("clicked")
     if(counter <= 0) return;
     slider.style.transition = "transform 0.4s ease-in-out";
     counter--;
